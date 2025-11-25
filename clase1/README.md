@@ -29,7 +29,7 @@ docker run -d -p 8081:80 --name mi-apache httpd
 
 **Screenshot:**
 
-![Container corriendo](screenshots/screenshot1.png)
+![ejecuta contenedor de apache](screenshots/Screenshot1.png)
 
 **Explicación:** 
 
