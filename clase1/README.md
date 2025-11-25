@@ -21,7 +21,7 @@ docker run -d -p 8081:80 --name mi-apache httpd
 **-d**
 	Ejecuta el contenedor en segundo plano (modo detached).
 
-**-p 8081:80*
+**-p 8081:80**
 	Mapea el puerto 80 del contenedor al puerto 8081 de la máquina local
 
 **--name mi-apache**
@@ -43,56 +43,64 @@ dea21fe1890a9ddb66925003eb5adbe67d0104a96303cfab2e3850c0b6ff36cb
 
 ### 2. Verificación del Funcionamiento
 
-# Listar contenedores en ejecución
+### Listar contenedores en ejecución
 
 ```bash
 docker ps
 ```
 
-**Screenshot:*
+**Screenshot:**
 
 ![Container corriendo](screenshots/Screenshot2.png)
 
-# Ver logs del contenedor
+### Ver logs del contenedor
 
 ```bash
 docker logs mi-apache
 ```
 
-**Screenshot:*
+**Screenshot:**
 
 ![Container corriendo](screenshots/Screenshot3.png)
 
 
-#Acceder desde el navegador
+### Acceder desde el navegador
 
 Accedí a `http://192.168.1.5:8081` y obtuve:
+
+**Screenshot:**
 
 ![Apache funcionando](screenshots/Screenshot4.png)
 
 ### 3. Limpieza
 
-# Detener comtenedor
+### Detener contenedor
 
 ```bash
 docker stop mi-apache
 ```
 
+**Screenshot:**
+
 ![stop Apache ](screenshots/Screenshot5.png)
 
-# Eliminar Contenedor
+### Eliminar Contenedor
 
 ```bash
 docker rm mi-apache
 ```
 
+**Screenshot:**
+
 ![eliminar Apache ](screenshots/Screenshot6.png)
 
-# Verificar que ya no existe
+### Verificar que ya no existe
 
 ```bash
 docker ps -a
 ```
+
+**Screenshot:**
 
 ![eliminar Apache ](screenshots/Screenshot7.png)
 
