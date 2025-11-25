@@ -17,50 +17,84 @@ docker run -d -p 8081:80 --name mi-apache httpd
 
 **docker run**
 	Ejecuta un nuevo contenedor.
+
 **-d**
 	Ejecuta el contenedor en segundo plano (modo detached).
+
 **-p 8081:80*
-	Mapea el puerto 80 del contenedor al puerto 8081 de la máquina local**--name mi-apache**
+	Mapea el puerto 80 del contenedor al puerto 8081 de la máquina local
+
+**--name mi-apache**
 	Asigna un nombre personalizado al contenedor.
+
 **httpd**
 	Imagen utilizada (servidor Apache).
-
 
 
 **Screenshot:**
 
 ![ejecuta contenedor de apache](screenshots/Screenshot1.png)
 
-**Explicación:** 
-
-
-
-
-
-Este comando crea y ejecuta un container con nginx en segundo plano (-d), mapeando el puerto 8080 de mi máquina al puerto 80 del container.
-
 **Salida:**
-\`\`\`
-a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
-\`\`\`
+```
+dea21fe1890a9ddb66925003eb5adbe67d0104a96303cfab2e3850c0b6ff36cb
+```
+ 
 
-### 2. Verificar que está corriendo
+### 2. Verificación del Funcionamiento
 
-\`\`\`bash
+# Listar contenedores en ejecución
+
+```bash
 docker ps
-\`\`\`
+```
 
-**Screenshot:**
+**Screenshot:*
 
-![Container corriendo](screenshots/docker-ps.png)
+![Container corriendo](screenshots/Screenshot2.png)
 
-### 3. Acceder desde el navegador
+# Ver logs del contenedor
 
-Accedí a `http://localhost:8080` y obtuve:
+```bash
+docker logs mi-apache
+```
 
-![Nginx funcionando](screenshots/nginx-browser.png)
+**Screenshot:*
+
+![Container corriendo](screenshots/Screenshot3.png)
 
 
+#Acceder desde el navegador
+
+Accedí a `http://192.168.1.5:8081` y obtuve:
+
+![Apache funcionando](screenshots/Screenshot4.png)
+
+### 3. Limpieza
+
+# Detener comtenedor
+
+```bash
+docker stop mi-apache
+```
+
+![stop Apache ](screenshots/Screenshot5.png)
+
+# Eliminar Contenedor
+
+```bash
+docker rm mi-apache
+```
+
+![eliminar Apache ](screenshots/Screenshot6.png)
+
+# Verificar que ya no existe
+
+```bash
+docker ps -a
+```
+
+![eliminar Apache ](screenshots/Screenshot7.png)
 
 
 ## Conclusiones
